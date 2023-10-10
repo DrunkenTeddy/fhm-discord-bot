@@ -1,0 +1,194 @@
+[
+	{
+    "name": "Anaheim Ducks",
+    "abbreviation": "ANA",
+    "conference": "Western",
+    "id": "anaheim-ducks"
+  },
+  {
+    "name": "Arizona Coyotes",
+    "abbreviation": "ARZ",
+    "conference": "Western",
+    "id": "arizona-coyotes"
+  },
+  {
+    "name": "Boston Bruins",
+    "abbreviation": "BOS",
+    "conference": "Eastern",
+    "id": "boston-bruins"
+  },
+  {
+    "name": "Buffalo Sabres",
+    "abbreviation": "BUF",
+    "conference": "Eastern",
+    "id": "buffalo-sabres"
+  },
+  {
+    "name": "Calgary Flames",
+    "abbreviation": "CGY",
+    "conference": "Western",
+    "id": "calgary-flames"
+  },
+  {
+    "name": "Carolina Hurricanes",
+    "abbreviation": "CAR",
+    "conference": "Eastern",
+    "id": "carolina-hurricanes"
+  },
+  {
+    "name": "Chicago Blackhawks",
+    "abbreviation": "CHI",
+    "conference": "Western",
+    "id": "chicago-blackhawks"
+  },
+  {
+    "name": "Colorado Avalanche",
+    "abbreviation": "COL",
+    "conference": "Western",
+    "id": "colorado-avalanche"
+  },
+  {
+    "name": "Columbus Blue Jackets",
+    "abbreviation": "CBJ",
+    "conference": "Eastern",
+    "id": "columbus-blue-jackets"
+  },
+  {
+    "name": "Dallas Stars",
+    "abbreviation": "DAL",
+    "conference": "Western",
+    "id": "dallas-stars"
+  },
+  {
+    "name": "Detroit Red Wings",
+    "abbreviation": "DET",
+    "conference": "Eastern",
+    "id": "detroit-red-wings"
+  },
+  {
+    "name": "Edmonton Oilers",
+    "abbreviation": "EDM",
+    "conference": "Western",
+    "id": "edmonton-oilers"
+  },
+  {
+    "name": "Florida Panthers",
+    "abbreviation": "FLA",
+    "conference": "Eastern",
+    "id": "florida-panthers"
+  },
+  {
+    "name": "Los Angeles Kings",
+    "abbreviation": "LAK",
+    "conference": "Western",
+    "id": "los-angeles-kings"
+  },
+  {
+    "name": "Minnesota Wild",
+    "abbreviation": "MIN",
+    "conference": "Western",
+    "id": "minnesota-wild"
+  },
+  {
+    "name": "Montreal Canadiens",
+    "abbreviation": "MTL",
+    "conference": "Eastern",
+    "id": "montreal-canadiens"
+  },
+  {
+    "name": "Nashville Predators",
+    "abbreviation": "NSH",
+    "conference": "Western",
+    "id": "nashville-predators"
+  },
+  {
+    "name": "New Jersey Devils",
+    "abbreviation": "NJD",
+    "conference": "Eastern",
+    "id": "new-jersey-devils"
+  },
+  {
+    "name": "New York Islanders",
+    "abbreviation": "NYI",
+    "conference": "Eastern",
+    "id": "new-york-islanders"
+  },
+  {
+    "name": "New York Rangers",
+    "abbreviation": "NYR",
+    "conference": "Eastern",
+    "id": "new-york-rangers"
+  },
+  {
+    "name": "Ottawa Senators",
+    "abbreviation": "OTT",
+    "conference": "Eastern",
+    "id": "ottawa-senators"
+  },
+  {
+    "name": "Philadelphia Flyers",
+    "abbreviation": "PHI",
+    "conference": "Eastern",
+    "id": "philadelphia-flyers"
+  },
+  {
+    "name": "Pittsburgh Penguins",
+    "abbreviation": "PIT",
+    "conference": "Eastern",
+    "id": "pittsburgh-penguins"
+  },
+  {
+    "name": "San Jose Sharks",
+    "abbreviation": "SJS",
+    "conference": "Western",
+    "id": "san-jose-sharks"
+  },
+  {
+    "name": "Seattle Kraken",
+    "abbreviation": "SEA",
+    "conference": "Western",
+    "id": "seattle-kraken"
+  },
+  {
+    "name": "St. Louis Blues",
+    "abbreviation": "STL",
+    "conference": "Western",
+    "id": "st-louis-blues"
+  },
+  {
+    "name": "Tampa Bay Lightning",
+    "abbreviation": "TBL",
+    "conference": "Eastern",
+    "id": "tampa-bay-lightning"
+  },
+  {
+    "name": "Toronto Maple Leafs",
+    "abbreviation": "TOR",
+    "conference": "Eastern",
+    "id": "toronto-maple-leafs"
+  },
+  {
+    "name": "Vancouver Canucks",
+    "abbreviation": "VAN",
+    "conference": "Western",
+    "id": "vancouver-canucks"
+  },
+  {
+    "name": "Vegas Golden Knights",
+    "abbreviation": "VGK",
+    "conference": "Western",
+    "id": "vegas-golden-knights"
+  },
+  {
+    "name": "Washington Capitals",
+    "abbreviation": "WAS",
+    "conference": "Eastern",
+    "id": "washington-capitals"
+  },
+  {
+    "name": "Winnipeg Jets",
+    "abbreviation": "WPG",
+    "conference": "Western",
+    "id": "winnipeg-jets"
+  }
+]

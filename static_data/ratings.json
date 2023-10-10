@@ -1,0 +1,147 @@
+[
+  {
+    "name": "Screening",
+    "value": "Screening",
+    "type": "technical"
+  },
+  {
+    "name": "Getting Open",
+    "value": "GettingOpen",
+    "type": "technical"
+  },
+  {
+    "name": "Passing",
+    "value": "Passing",
+    "type": "technical"
+  },
+  {
+    "name": "Puckhandling",
+    "value": "PuckHandling",
+    "type": "technical"
+  },
+  {
+    "name": "Shooting Accuracy",
+    "value": "ShootingAccuracy",
+    "type": "technical"
+  },
+  {
+    "name": "Shooting Range",
+    "value": "ShootingRange",
+    "type": "technical"
+  },
+  {
+    "name": "Offensive Read",
+    "value": "OffensiveRead",
+    "type": "technical"
+  },
+  {
+    "name": "Checking",
+    "value": "Checking",
+    "type": "technical"
+  },
+  {
+    "name": "Faceoffs",
+    "value": "Faceoffs",
+    "type": "technical"
+  },
+  {
+    "name": "Hitting",
+    "value": "Hitting",
+    "type": "technical"
+  },
+  {
+    "name": "Positioning",
+    "value": "Positioning",
+    "type": "technical"
+  },
+  {
+    "name": "Shot Blocking",
+    "value": "ShotBlocking",
+    "type": "technical"
+  },
+  {
+    "name": "Stickchecking",
+    "value": "Stickchecking",
+    "type": "technical"
+  },
+  {
+    "name": "Defensive Read",
+    "value": "DefensiveRead",
+    "type": "technical"
+  },
+  {
+    "name": "Acceleration",
+    "value": "Acceleration",
+    "type": "physical"
+  },
+  {
+    "name": "Agility",
+    "value": "Agility",
+    "type": "physical"
+  },
+  {
+    "name": "Balance",
+    "value": "Balance",
+    "type": "physical"
+  },
+  {
+    "name": "Speed",
+    "value": "Speed",
+    "type": "physical"
+  },
+  {
+    "name": "Stamina",
+    "value": "Stamina",
+    "type": "physical"
+  },
+  {
+    "name": "Strength",
+    "value": "Strength",
+    "type": "physical"
+  },
+  {
+    "name": "Fighting",
+    "value": "Fighting",
+    "type": "physical"
+  },
+  {
+    "name": "Aggression",
+    "value": "Aggression",
+    "type": "mental"
+  },
+  {
+    "name": "Mental Toughness",
+    "value": "MentalToughness",
+    "type": "mental"
+  },
+  {
+    "name": "Bravery",
+    "value": "Bravery",
+    "type": "mental"
+  },
+  {
+    "name": "Determination",
+    "value": "Determination",
+    "type": "mental"
+  },
+  {
+    "name": "Team Player",
+    "value": "Teamplayer",
+    "type": "mental"
+  },
+  {
+    "name": "Leadership",
+    "value": "Leadership",
+    "type": "mental"
+  },
+  {
+    "name": "Temperament",
+    "value": "Temperament",
+    "type": "mental"
+  },
+  {
+    "name": "Professionalism",
+    "value": "Professionalism",
+    "type": "mental"
+  }
+]

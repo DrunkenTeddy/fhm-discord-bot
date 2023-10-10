@@ -1,0 +1,25 @@
+{
+  "name": "inhl-discord-bot",
+  "version": "0.0.1",
+  "description": "iNHL Discord Bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "QC",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.2.1",
+    "chatgpt": "^5.2.5",
+    "chatgpt-commonjs": "^2.1.1",
+    "csv-parser": "^3.0.0",
+    "discord.js": "^14.8.0",
+    "mysql": "^2.18.1",
+    "node-ssh": "^13.0.0",
+    "openai": "^3.3.0"
+  },
+  "devDependencies": {
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-align-assignments": "^1.1.2"
+  }
+}

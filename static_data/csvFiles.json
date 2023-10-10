@@ -1,0 +1,41 @@
+[
+  {
+    "name": "boxscore_period_scoring_summary.csv"
+  },
+  {
+    "name": "boxscore_summary.csv"
+  },
+  {
+    "name": "injuries.csv"
+  },
+  {
+    "name": "player_goalie_stats_rs.csv"
+  },
+  {
+    "name": "player_goalie_stats_po.csv"
+  },
+  {
+    "name": "player_master.csv"
+  },
+  {
+    "name": "player_ratings.csv"
+  },
+  {
+    "name": "player_skater_stats_rs.csv"
+  },
+  {
+    "name": "player_skater_stats_po.csv"
+  },
+  {
+    "name": "suspensions.csv"
+  },
+  {
+    "name": "team_data.csv"
+  },
+  {
+    "name": "team_lines.csv"
+  },
+  {
+    "name": "team_records.csv"
+  }
+]

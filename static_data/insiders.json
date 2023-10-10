@@ -1,0 +1,42 @@
+[
+	{
+    "name": "Bob McKenzie",
+    "image": "https://i.imgur.com/S5R2bbc.jpg",
+    "network": "TSN"
+  },
+  {
+    "name": "Darren Dreger",
+    "image": "https://i.imgur.com/j3Dh2tR.jpg",
+    "network": "TSN"
+  },
+  {
+    "name": "Pierre LeBrun",
+    "image": "https://i.imgur.com/2i41gAp.jpg",
+    "network": "TSN"
+  },
+  {
+    "name": "Craig Button",
+    "image": "https://i.imgur.com/rdnavha.jpg",
+    "network": "TSN"
+  },
+  {
+    "name": "Jeff Marek",
+    "image": "https://i.imgur.com/g0auK9j.jpg",
+    "network": "SN"
+  },
+  {
+    "name": "Elliotte Friedman",
+    "image": "https://i.imgur.com/uTntXuV.png",
+    "network": "SN"
+  },
+  {
+    "name": "The Hockey Guy",
+    "image": "https://i.imgur.com/M17dsoe.jpg",
+    "network": "TSN"
+  },
+  {
+    "name": "Kevin Weekes",
+    "image": "https://i.imgur.com/3MbUoYn.png",
+    "network": "TSN"
+  }
+]
