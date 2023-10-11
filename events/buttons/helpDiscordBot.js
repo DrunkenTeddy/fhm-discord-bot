@@ -25,10 +25,6 @@ If you use a command and the bot does not reply in the next 3 or 5 seconds, it m
       .setCustomId("help-commands-update")
       .setLabel("Available Commands".toTitleCase())
       .setStyle(ButtonStyle.Primary),
-    new ButtonBuilder()
-      .setCustomId("help-trade-block-update")
-      .setLabel("Trade Block Help")
-      .setStyle(ButtonStyle.Primary),
   );
 
   const secondaryButtons = new ActionRowBuilder().addComponents(

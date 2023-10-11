@@ -36,10 +36,6 @@ module.exports = async (interaction, update = true) => {
       .setCustomId("help-commands-update")
       .setLabel("Available Commands".toTitleCase())
       .setStyle(ButtonStyle.Success),
-    new ButtonBuilder()
-      .setCustomId("help-trade-block-update")
-      .setLabel("Trade Block Help")
-      .setStyle(ButtonStyle.Primary),
   );
 
   const secondaryButtons = new ActionRowBuilder().addComponents(
