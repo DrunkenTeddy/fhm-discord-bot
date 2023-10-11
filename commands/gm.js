@@ -10,7 +10,7 @@ const sortTeams              = require("../helpers/sortTeams");
 const getScheduledSims       = require("../helpers/getScheduledSims");
 const getTeamFileStatus      = require("../helpers/getTeamFileStatus");
 const getConferenceStandings = require("../helpers/getConferenceStandings");
-//const getStatLeadersForTeam  = require("../helpers/getStatLeadersForTeam");
+const getStatLeadersForTeam  = require("../helpers/getStatLeadersForTeam");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -43,9 +43,9 @@ module.exports = {
     const sortedStandings           = standings.sort(sortTeams);
     const sortedConferenceStandings = conferenceStandings.sort(sortTeams);
     const teamFileStatus            = getTeamFileStatus(teamID);
-    //const teamLeaders               = await getStatLeadersForTeam(teamID);
-    //const goalLeadersString         = teamLeaders.goal.slice(0, 3).map((g) => `**${g.G}**-${g["First Name"]} ${g["Last Name"]}`).join("\n");
-    //const pointLeadersString        = teamLeaders.point.slice(0, 3).map((p) => `**${p.P}**-${p["First Name"]} ${p["Last Name"]}`).join("\n");
+    const teamLeaders               = await getStatLeadersForTeam(teamID);
+    const goalLeadersString         = teamLeaders.goal.slice(0, 3).map((g) => `**${g.G}**-${g["First Name"]} ${g["Last Name"]}`).join("\n");
+    const pointLeadersString        = teamLeaders.point.slice(0, 3).map((p) => `**${p.P}**-${p["First Name"]} ${p["Last Name"]}`).join("\n");
 
     const displayedTeams = 2;
 
@@ -67,7 +67,7 @@ module.exports = {
       name   : "Team Record",
       value  : `${teamRecord.Wins}-${teamRecord.Losses}-${teamRecord.OTL + teamRecord.SOL} (${teamRecord.Points} pts)`,
       inline : true,
-    },/* {
+    }, {
       name   : "Goal Leaders",
       value  : goalLeadersString,
       inline : true,
@@ -75,7 +75,7 @@ module.exports = {
       name   : "Point Leaders",
       value  : pointLeadersString,
       inline : true,
-    }*/);
+    });
 
     const nextSimEmbed = new EmbedBuilder()
       .setColor(teamInfo.PrimaryColor)
@@ -160,10 +160,10 @@ module.exports = {
         .setCustomId("view-sim-schedule")
         .setLabel("Sim Schedule".toTitleCase())
         .setStyle(ButtonStyle.Success),
-      /*new ButtonBuilder()
+      new ButtonBuilder()
         .setCustomId("view-team-stat-leaders")
         .setLabel("Team Stat Leaders".toTitleCase())
-        .setStyle(ButtonStyle.Success),*/
+        .setStyle(ButtonStyle.Success),
       new ButtonBuilder()
         .setCustomId("view-team-lines")
         .setLabel("View My Lines".toTitleCase())
@@ -171,10 +171,10 @@ module.exports = {
     );
 
     const primaryButtons = new ActionRowBuilder().addComponents(
-      /*new ButtonBuilder()
+      new ButtonBuilder()
         .setCustomId("trade-block-open")
         .setLabel("Update my Trade Block".toTitleCase())
-        .setStyle(ButtonStyle.Primary),*/
+        .setStyle(ButtonStyle.Primary),
       new ButtonBuilder()
         .setCustomId("send-new-insider-info")
         .setLabel("Send Insider Info".toTitleCase())
