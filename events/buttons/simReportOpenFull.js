@@ -7,10 +7,4 @@ module.exports = async (interaction) => {
   const teamInfo = await getTeamInfo({ teamID });
   const teamName = `${teamInfo.Name} ${teamInfo.Nickname}`;
 
-  const tradeBlockEmbed = await getTeamSimReportCard(interaction, teamName, true);
-
-  await interaction.reply({
-    embeds    : [tradeBlockEmbed],
-    ephemeral : true,
-  });
 };
