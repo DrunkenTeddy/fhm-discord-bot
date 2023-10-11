@@ -48,10 +48,10 @@ module.exports = {
     const reportCardEmbed = await this.getTeamSimReportCard(interaction, teamName, true);
 
     const buttons = new ActionRowBuilder().addComponents(
-      new ButtonBuilder()
+/*      new ButtonBuilder()
         .setCustomId(`view-sim-team-stat-leaders-${teamID}`)
         .setLabel("Sim Team Stat Leaders".toTitleCase())
-        .setStyle(ButtonStyle.Success),
+        .setStyle(ButtonStyle.Success), */
       new ButtonBuilder()
         .setCustomId(`sim-report-share-${teamID}`)
         .setLabel("Share Sim Report Card".toTitleCase())
