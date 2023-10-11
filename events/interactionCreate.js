@@ -27,7 +27,6 @@ const contractExtensionEdit        = require("./buttons/contractExtensionEdit");
 const contractExtensionReject      = require("./buttons/contractExtensionReject");
 const helpCommands                 = require("./buttons/helpCommands");
 const helpDiscordBot               = require("./buttons/helpDiscordBot");
-const helpTradeBlock               = require("./buttons/helpTradeBlock");
 const newCSVUpload                 = require("./buttons/newCSVUpload");
 const newInsiderInfo               = require("./buttons/newInsiderInfo");
 const newPrediction                = require("./buttons/newPrediction");
@@ -60,22 +59,6 @@ const staffSigningReject           = require("./buttons/staffSigningReject");
 const syncDatabase                 = require("./buttons/syncDatabase");
 const tradeAccept                  = require("./buttons/tradeAccept");
 const tradeAcceptGM                = require("./buttons/tradeAcceptGM");
-const tradeBlockAddPlayers         = require("./buttons/tradeBlockAddPlayers");
-const tradeBlockAddUntouchables    = require("./buttons/tradeBlockAddUntouchables");
-const tradeBlockOpenFull           = require("./buttons/tradeBlockOpenFull");
-const tradeBlockRefresh            = require("./buttons/tradeBlockRefresh");
-const tradeBlockRemovePlayers      = require("./buttons/tradeBlockRemovePlayers");
-const tradeBlockRemoveUntouchables = require("./buttons/tradeBlockRemoveUntouchables");
-const tradeBlockSearch             = require("./buttons/tradeBlockSearch");
-const tradeBlockSearchUpdate       = require("./buttons/tradeBlockSearchUpdate");
-const tradeBlockShare              = require("./buttons/tradeBlockShare");
-const tradeBlockShowMyTeam         = require("./buttons/tradeBlockShowMyTeam");
-const tradeBlockShowRatings        = require("./buttons/tradeBlockShowRatings");
-const tradeBlockTeamRefresh        = require("./buttons/tradeBlockTeamRefresh");
-const tradeBlockUpdate             = require("./buttons/tradeBlockUpdate");
-const tradeBlockViewLastPlayers    = require("./buttons/tradeBlockViewLastPlayers");
-const tradeBlockViewTopPlayers     = require("./buttons/tradeBlockViewTopPlayers");
-const tradeBlockViewTopProspects   = require("./buttons/tradeBlockViewTopProspects");
 const tradeReject                  = require("./buttons/tradeReject");
 const tradeRejectGM                = require("./buttons/tradeRejectGM");
 
@@ -91,8 +74,6 @@ const newPredictionModal            = require("./modals/newPrediction");
 const newTradeAddPickConditionModal = require("./modals/newTradeAddPickCondition");
 const newTradeOffer                 = require("./modals/newTradeOffer");
 const staffSigningEditModal         = require("./modals/staffSigningEditModal");
-const tradeBlockShareModal          = require("./modals/tradeBlockShare");
-const tradeBlockUpdateModal         = require("./modals/tradeBlockUpdate");
 const tradeOffer                    = require("./modals/tradeOffer");
 
 const adminRegisterGMSelect              = require("./select/adminRegisterGM");
@@ -102,17 +83,9 @@ const newTradeAddPickConditionSelect     = require("./select/newTradeAddPickCond
 const newTradeRemovePickConditionSelect  = require("./select/newTradeRemovePickConditionSelect");
 const newTradeUpdateTeams                = require("./select/newTradeUpdateTeams");
 const predictionCloseWinnerSelect        = require("./select/predictionCloseWinner");
-const tradeBlockAddPlayersSelect         = require("./select/tradeBlockAddPlayersSelect");
-const tradeBlockAddUntouchablesSelect    = require("./select/tradeBlockAddUntouchablesSelect");
-const tradeBlockOpenPositionSelect       = require("./select/tradeBlockOpenPositionSelect");
-const tradeBlockOpenRatingSelect         = require("./select/tradeBlockOpenRatingSelect");
-const tradeBlockOpenSelect               = require("./select/tradeBlockOpenSelect");
-const tradeBlockRemovePlayersSelect      = require("./select/tradeBlockRemovePlayersSelect");
-const tradeBlockRemoveUntouchablesSelect = require("./select/tradeBlockRemoveUntouchablesSelect");
 
 const closePredictionContextMenu = require("./contextmenu/closePrediction");
 const gmHubContextMenu           = require("./contextmenu/showGMHub");
-const tradeBlockContextMenu      = require("./contextmenu/showTradeBlock");
 
 module.exports = {
   name: "interactionCreate",
@@ -172,44 +145,10 @@ module.exports = {
         await offersheetSigningAcceptGM(interaction);
       } else if (interaction.customId.startsWith("os-gm-reject")) {
         await offersheetSigningRejectGM(interaction);
-      } else if (interaction.customId.startsWith("trade-block-show-ratings-")) {
-        await tradeBlockShowRatings(interaction);
       } else if (interaction.customId.startsWith("trade-accept-gm")) {
         await tradeAcceptGM(interaction);
       } else if (interaction.customId.startsWith("trade-reject-gm")) {
         await tradeRejectGM(interaction);
-      } else if (interaction.customId.startsWith("trade-block-update")) {
-        await tradeBlockUpdate(interaction);
-      } else if (interaction.customId.startsWith("trade-block-share")) {
-        await tradeBlockShare(interaction);
-      } else if (interaction.customId.startsWith("trade-block-refresh")) {
-        await tradeBlockRefresh(interaction);
-      } else if (interaction.customId.startsWith("trade-block-team-refresh")) {
-        await tradeBlockTeamRefresh(interaction);
-      } else if (interaction.customId.startsWith("trade-block-add-players")) {
-        await tradeBlockAddPlayers(interaction);
-      } else if (interaction.customId.startsWith("trade-block-remove-players")) {
-        await tradeBlockRemovePlayers(interaction);
-      } else if (interaction.customId.startsWith("trade-block-add-untouchables")) {
-        await tradeBlockAddUntouchables(interaction);
-      } else if (interaction.customId.startsWith("trade-block-remove-untouchables")) {
-        await tradeBlockRemoveUntouchables(interaction);
-      } else if (interaction.customId.startsWith("trade-block-open-full")) {
-        await tradeBlockOpenFull(interaction);
-      } else if (interaction.customId.startsWith("trade-block-new-search")) {
-        await tradeBlockSearchUpdate(interaction);
-      } else if (interaction.customId.startsWith("trade-block-search")) {
-        await tradeBlockSearch(interaction);
-      } else if (interaction.customId.startsWith("trade-block-show-my-team")) {
-        await tradeBlockShowMyTeam(interaction, true);
-      } else if (interaction.customId.startsWith("trade-block-open")) {
-        await tradeBlockShowMyTeam(interaction);
-      } else if (interaction.customId.startsWith("trade-block-expand-top-players")) {
-        await tradeBlockViewTopPlayers(interaction);
-      } else if (interaction.customId.startsWith("trade-block-expand-top-prospects")) {
-        await tradeBlockViewTopProspects(interaction);
-      } else if (interaction.customId.startsWith("trade-block-expand-last-players")) {
-        await tradeBlockViewLastPlayers(interaction);
       } else if (interaction.customId.startsWith("sim-recap-team-report-card")) {
         await simRecapReportCard(interaction);
       } else if (interaction.customId.startsWith("sim-recap-summary")) {
@@ -248,8 +187,6 @@ module.exports = {
         await helpDiscordBot(interaction, interaction.customId.endsWith("-update"));
       } else if (interaction.customId.startsWith("help-commands")) {
         await helpCommands(interaction, interaction.customId.endsWith("-update"));
-      } else if (interaction.customId.startsWith("help-trade-block")) {
-        await helpTradeBlock(interaction, interaction.customId.endsWith("-update"));
       } else if (interaction.customId.startsWith("view-team-stat-leaders")) {
         await showTeamStatLeaders(interaction);
       } else if (interaction.customId.startsWith("view-sim-schedule")) {
@@ -329,10 +266,6 @@ module.exports = {
         await newTradeAddPickConditionModal(interaction);
       } else if (interaction.customId.startsWith("trade-offer")) {
         await tradeOffer(interaction);
-      } else if (interaction.customId.startsWith("trade-block-modal")) {
-        await tradeBlockUpdateModal(interaction);
-      } else if (interaction.customId.startsWith("trade-block-share-modal")) {
-        await tradeBlockShareModal(interaction);
       } else if (interaction.customId.startsWith("send-new-insider-info-modal")) {
         await newInsiderInfoModal(interaction);
       } else if (interaction.customId.startsWith("contract-extension-edit")) {
@@ -358,23 +291,7 @@ module.exports = {
       // SELECT MENUS
       console.log(`[${Date.now()}] ${interaction.user.tag} used select menu ${interaction.customId}`);
 
-      if (interaction.customId.startsWith("trade-block-open")) {
-        await tradeBlockOpenSelect(interaction);
-      } else if (interaction.customId.startsWith("trade-block-position")) {
-        await tradeBlockOpenPositionSelect(interaction);
-      } else if (interaction.customId.startsWith("trade-block-technical-rating")) {
-        await tradeBlockOpenRatingSelect(interaction);
-      } else if (interaction.customId.startsWith("trade-block-physical-mental-rating")) {
-        await tradeBlockOpenRatingSelect(interaction);
-      } else if (interaction.customId.startsWith("trade-block-add-players")) {
-        await tradeBlockAddPlayersSelect(interaction);
-      } else if (interaction.customId.startsWith("trade-block-remove-players")) {
-        await tradeBlockRemovePlayersSelect(interaction);
-      } else if (interaction.customId.startsWith("trade-block-add-untouchables")) {
-        await tradeBlockAddUntouchablesSelect(interaction);
-      } else if (interaction.customId.startsWith("trade-block-remove-untouchables")) {
-        await tradeBlockRemoveUntouchablesSelect(interaction);
-      } else if (interaction.customId.startsWith("new-trade-add-teams")) {
+      if (interaction.customId.startsWith("new-trade-add-teams")) {
         await newTradeUpdateTeams(interaction);
       } else if (interaction.customId.startsWith("new-trade-add-pick-condition")) {
         await newTradeAddPickConditionSelect(interaction);
@@ -393,9 +310,6 @@ module.exports = {
       // USER CONTEXT MENU
       console.log(`[${Date.now()}] ${interaction.user.tag} used context menu "${interaction.commandName}"`);
 
-      if (interaction.commandName === "Show Trade Block") {
-        await tradeBlockContextMenu(interaction);
-      }
     } else if (interaction.isMessageContextMenuCommand()) {
       // MESSAGE CONTEXT MENU
       console.log(`[${Date.now()}] ${interaction.user.tag} used context menu "${interaction.commandName}"`);
