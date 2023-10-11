@@ -47,7 +47,7 @@ module.exports = {
         .setStyle(ButtonStyle.Secondary),
     );
 
-    /*const draftButtons = new ActionRowBuilder().addComponents(
+    const draftButtons = new ActionRowBuilder().addComponents(
       new ButtonBuilder()
         .setCustomId("admin-draft-start")
         .setLabel("Start New Draft".toTitleCase())
@@ -60,7 +60,7 @@ module.exports = {
         .setCustomId("admin-draft-rollback")
         .setLabel("Rollback Draft Position".toTitleCase())
         .setStyle(ButtonStyle.Secondary),
-    );*/
+    );
 
     const mockDraftButtons = new ActionRowBuilder();
 
