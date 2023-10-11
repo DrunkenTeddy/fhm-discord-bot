@@ -172,10 +172,6 @@ module.exports = {
 
     const primaryButtons = new ActionRowBuilder().addComponents(
       new ButtonBuilder()
-        .setCustomId("trade-block-open")
-        .setLabel("Update my Trade Block".toTitleCase())
-        .setStyle(ButtonStyle.Primary),
-      new ButtonBuilder()
         .setCustomId("send-new-insider-info")
         .setLabel("Send Insider Info".toTitleCase())
         .setStyle(ButtonStyle.Primary),
