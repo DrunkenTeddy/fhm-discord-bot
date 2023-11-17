@@ -8,7 +8,7 @@ const getPickID              = require("../../helpers/getPickID");
 const getTeamInfo            = require("../../helpers/getTeamInfo");
 const transformTradeString   = require("../../helpers/transformTradeString");
 
-const delay = 1000 * 60 * 5;
+const delay = 5;
 
 module.exports = async (interaction) => {
   interaction.deferUpdate({ ephemeral: true });
@@ -50,7 +50,7 @@ module.exports = async (interaction) => {
     const team1Name = teamNameLines[0].replaceAll("**", "").replaceAll(" receives:", "");
     const team2Name = teamNameLines[1].replaceAll("**", "").replaceAll(" receives:", "");
     const team3Name = teamNameLines[2].replaceAll("**", "").replaceAll(" receives:", "");
-
+    /*
     const insiderStrings = [
       "Nothing official yet, but I'm hearing that a 3 way deal between the (Team A), (Team B) and (Team C) is in the works. Details to come.",
       "I'm hearing that the (Team A) and (Team B) are working on a deal. (Team C) could also be involved. Details to come.",
@@ -72,12 +72,12 @@ module.exports = async (interaction) => {
       .replaceAll("(Team B)", team2Name)
       .replaceAll("(Team C)", team3Name);
 
-    await sendInsiderInfo(interaction, insider.name, insiderString);
+    await sendInsiderInfo(interaction, insider.name, insiderString);*/
 
     setTimeout(async () => {
       const channel = interaction.client.channels.cache.find((c) => c.name === "trade-center");
       await channel.send({ content: `**We have a trade to announce!**\n${tradeInfo}` });
-
+      /*
       const confirmationInsiderStrings = [
         "I'm hearing that the 3 way trade between the (Team A), (Team B) and (Team C) is now official.",
         "The league just announced a 3 way trade involving the (Team A), (Team B) and (Team C). Here are the details.",
@@ -104,12 +104,12 @@ module.exports = async (interaction) => {
         .replaceAll("(Team B)", team2Name)
         .replaceAll("(Team C)", team3Name);
 
-      sendInsiderInfo(interaction, insider.name, `${confirmationInsiderString}\n${tradeInfo}`);
+      sendInsiderInfo(interaction, insider.name, `${confirmationInsiderString}\n${tradeInfo}`);*/
     }, delay);
   } else {
     const team1Name = teamNameLines[0].replaceAll("**", "").replaceAll(" sends:", "");
     const team2Name = teamNameLines[1].replaceAll("**", "").replaceAll(" sends:", "");
-
+    /*
     const insiderStrings = [
       "Nothing official yet, but I'm hearing that a deal between the (Team A) and (Team B) is in the works. Details to come.",
       "I'm hearing that the (Team A) and (Team B) are working on a deal. Details to come.",
@@ -152,12 +152,12 @@ module.exports = async (interaction) => {
       .replaceAll("(Team A)", team1Name)
       .replaceAll("(Team B)", team2Name);
 
-    await sendInsiderInfo(interaction, insider.name, insiderString);
+    await sendInsiderInfo(interaction, insider.name, insiderString);*/
 
     setTimeout(async () => {
       const channel = interaction.client.channels.cache.find((c) => c.name === "trade-center");
       await channel.send({ content: `**We have a trade to announce!**\n${tradeInfo}` });
-
+      /*
       const confirmationInsiderStrings = [
         "I'm hearing that the trade between the (Team A) and (Team B) has been approved by the Trade Review Board. Here are the details:",
         "Excited to be the first to break the news of the deal between the (Team A) and (Team B)!",
@@ -202,7 +202,7 @@ module.exports = async (interaction) => {
         .replaceAll("(Team A)", team1Name)
         .replaceAll("(Team B)", team2Name);
 
-      sendInsiderInfo(interaction, insider.name, `${confirmationInsiderString}\n${tradeInfo}`);
+      sendInsiderInfo(interaction, insider.name, `${confirmationInsiderString}\n${tradeInfo}`);*/
     }, delay);
   }
 
