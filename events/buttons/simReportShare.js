@@ -19,7 +19,7 @@ module.exports = async (interaction) => {
       .setStyle(ButtonStyle.Primary),
   );
 
-  const channel = interaction.client.channels.cache.find((c) => c.name === "sim-discussion");
+  const channel = interaction.client.channels.cache.find((c) => c.name === "league-discussion");
   await channel.send({
     embeds     : [tradeBlockEmbed],
     components : [buttons],
