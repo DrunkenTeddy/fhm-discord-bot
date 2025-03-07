@@ -190,5 +190,11 @@
     "abbreviation": "WPG",
     "conference": "Western",
     "id": "winnipeg-jets"
+  },
+  {
+    "name": "Utah Hockey Club",
+    "abbreviation": "UTA",
+    "conference": "Western",
+    "id": "utah-hockey-club"
   }
 ]
