@@ -16,21 +16,12 @@ module.exports = async (interaction, prefix, multiple = false, selectedTeams = [
   }, {});
 
   const teamsSelect = await Object.entries(teamsByConference).reduce(async (searchMenusAcc, [conference, conferenceTeams], index) => {
-  const options = await conferenceTeams.reduce(async (optionsAcc, team) => {
-    const acc = await optionsAcc;
-
-    const emojiName = team.name.replaceAll(" ", "").replaceAll(".", "").toLowerCase();
-    const foundEmoji = interaction.client.emojis.cache.find((emoji) => emoji.name === emojiName);
-
-    acc.push({
+    const options = await conferenceTeams.reduce(async (optionsAcc, team) => [...(await optionsAcc), {
       label   : team.name,
       value   : team.abbreviation,
       default : selectedTeams.includes(team.abbreviation),
-      emoji   : foundEmoji ? { id: foundEmoji.id } : undefined,
-    });
-
-    return acc;
-  }, []);
+      emoji   : { id: interaction.client.emojis.cache.find((emoji) => emoji.name === team.name.replaceAll(" ", "").replaceAll(".", "").toLowerCase()).id },
+    }], []);
 
     const searchMenu = new ActionRowBuilder().addComponents(
       new StringSelectMenuBuilder()
