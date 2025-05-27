@@ -6,12 +6,6 @@
     "id": "anaheim-ducks"
   },
   {
-    "name": "Utah Mammoth",
-    "abbreviation": "UTA",
-    "conference": "Western",
-    "id": "utah-mammoth"
-  },
-  {
     "name": "Boston Bruins",
     "abbreviation": "BOS",
     "conference": "Eastern",
@@ -192,9 +186,9 @@
     "id": "winnipeg-jets"
   },
   {
-    "name": "Utah Hockey Club",
+    "name": "Utah Mammoth",
     "abbreviation": "UTA",
     "conference": "Western",
-    "id": "utah-hockey-club"
+    "id": "utah-mammoth"
   }
 ]
