@@ -1,11 +1,11 @@
 module.exports = (salaryNumber, yearsNumber, teamLogo) => {
   const compensation = {
-    1511701  : "No Compensation",
-    2290457  : `${teamLogo} 3rd round pick`,
-    4580917  : `${teamLogo} 2nd round pick`,
-    6871374  : `${teamLogo} 1st round pick\n${teamLogo} 3rd round pick`,
-    9161834  : `${teamLogo} 1st round pick\n${teamLogo} 2nd pound pick\n${teamLogo} 3rd round pick`,
-    11452294 : `${teamLogo} 1st round pick\n${teamLogo} 1st round pick\n${teamLogo} 2nd pound pick\n${teamLogo} 3rd round pick`,
+    1544424  : "No Compensation",
+    2340037  : `${teamLogo} 3rd round pick`,
+    4680076  : `${teamLogo} 2nd round pick`,
+    7020113  : `${teamLogo} 1st round pick\n${teamLogo} 3rd round pick`,
+    9360153  : `${teamLogo} 1st round pick\n${teamLogo} 2nd pound pick\n${teamLogo} 3rd round pick`,
+    11700192 : `${teamLogo} 1st round pick\n${teamLogo} 1st round pick\n${teamLogo} 2nd pound pick\n${teamLogo} 3rd round pick`,
     20000000 : `${teamLogo} 1st round pick\n${teamLogo} 1st round pick\n${teamLogo} 1st round pick\n${teamLogo} 1st round pick`,
   };
 
