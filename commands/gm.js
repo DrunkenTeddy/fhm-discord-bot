@@ -63,7 +63,25 @@ module.exports = {
       .setColor(teamInfo.PrimaryColor)
       .setTitle(teamNameWithIcon);
 
-    teamStatsEmbed.addFields({
+teamStatsEmbed.addFields(
+  {
+    name: "Team Record",
+    value: `${teamRecord.Wins}-${teamRecord.Losses}-${teamRecord.OTL + teamRecord.SOL} (${teamRecord.Points} pts)`,
+    inline: true,
+  },
+  {
+    name: "Goal Leaders",
+    value: goalLeadersString || "No data available",
+    inline: true,
+  },
+  {
+    name: "Point Leaders",
+    value: pointLeadersString || "No data available",
+    inline: true,
+  }
+);
+    
+/*    teamStatsEmbed.addFields({
       name   : "Team Record",
       value  : `${teamRecord.Wins}-${teamRecord.Losses}-${teamRecord.OTL + teamRecord.SOL} (${teamRecord.Points} pts)`,
       inline : true,
@@ -76,7 +94,7 @@ module.exports = {
       value  : pointLeadersString,
       inline : true,
     });
-
+*/
     const nextSimEmbed = new EmbedBuilder()
       .setColor(teamInfo.PrimaryColor)
       .setTitle(" ");
