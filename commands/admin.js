@@ -1,5 +1,8 @@
 const {
-  SlashCommandBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle,
+  SlashCommandBuilder,
+  ActionRowBuilder,
+  ButtonBuilder,
+  ButtonStyle,
 } = require("discord.js");
 
 const draftProfiles = require("../static_data/draftProfiles.json");
@@ -19,6 +22,10 @@ module.exports = {
         .setCustomId("admin-register-gm")
         .setLabel("Register New GM".toTitleCase())
         .setStyle(ButtonStyle.Success),
+      new ButtonBuilder()
+        .setCustomId("admin-remove-gm")
+        .setLabel("Remove GM".toTitleCase())
+        .setStyle(ButtonStyle.Danger),
     );
 
     const secondaryButtons = new ActionRowBuilder().addComponents(
@@ -81,9 +88,15 @@ module.exports = {
     // );
 
     const message = {
-      embeds     : [],
-      components : [primaryButtons, secondaryButtons, awardsButtons, mockDraftButtons, draftButtons],
-      ephemeral  : true,
+      embeds: [],
+      components: [
+        primaryButtons,
+        secondaryButtons,
+        awardsButtons,
+        mockDraftButtons,
+        draftButtons,
+      ],
+      ephemeral: true,
     };
 
     if (reply) {
