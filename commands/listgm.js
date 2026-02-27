@@ -1,8 +1,6 @@
-const {
-  SlashCommandBuilder, EmbedBuilder,
-} = require("discord.js");
-const getDiscordIds       = require("../helpers/getDiscordIds");
-const getTeamInfo         = require("../helpers/getTeamInfo");
+const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
+const getDiscordIds = require("../helpers/getDiscordIds");
+const getTeamInfo = require("../helpers/getTeamInfo");
 const getTeamNameWithIcon = require("../helpers/getTeamNameWithIcon");
 
 module.exports = {
@@ -18,13 +16,17 @@ module.exports = {
     const discordIDs = await getDiscordIds();
 
     const gmListString = await discordIDs.reduce(async (acc, discordInfo) => {
-      const teamInfo = await getTeamInfo({ discordID: discordInfo.DiscordID });
+      const teamInfo = await getTeamInfoFromAbbreviation(discordInfo.Abbr);
 
-      const teamName         = `${teamInfo.Name} ${teamInfo.Nickname}`;
-      const teamNameWithLogo = getTeamNameWithIcon(teamName, interaction.client.emojis.cache);
-      const string           = `${teamNameWithLogo}: <@${discordInfo.DiscordID}>\n`;
+      const teamName = `${teamInfo.Name} ${teamInfo.Nickname}`;
+      const teamNameWithLogo = getTeamNameWithIcon(
+        teamName,
+        interaction.client.emojis.cache,
+      );
+      const gm = `<@${discordInfo.DiscordID}>` || "V Acant";
+      const string = `${teamNameWithLogo}: ${gm}\n`;
 
-      return await acc + string;
+      return (await acc) + string;
     }, Promise.resolve(""));
 
     const gmListEmbed = new EmbedBuilder()
@@ -33,8 +35,8 @@ module.exports = {
       .setDescription(gmListString);
 
     await interaction.reply({
-      ephemeral : true,
-      embeds    : [gmListEmbed],
+      ephemeral: true,
+      embeds: [gmListEmbed],
     });
   },
 };
